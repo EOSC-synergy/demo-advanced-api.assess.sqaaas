@@ -1,9 +1,9 @@
 config:
   credentials: []
   project_repos:
-    git.scc.kit.edu/m-team/ai/demo-advanced-api:
+    codebase.helmholtz.cloud/m-team/ai/demo-advanced-api:
       branch: main
-      repo: https://git.scc.kit.edu/m-team/ai/demo-advanced-api
+      repo: https://codebase.helmholtz.cloud/m-team/ai/demo-advanced-api
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/2.0.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
@@ -13,30 +13,30 @@ environment:
 sqa_criteria:
   QC.Acc:
     repos:
-      git.scc.kit.edu/m-team/ai/demo-advanced-api git:
+      codebase.helmholtz.cloud/m-team/ai/demo-advanced-api git:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-brown-bonobo.sh
-        container: qc.acc_sunny-emerald-grouse
+        - /usr/bin/env sh .sqa/script.cranky-pear-capuchin.sh
+        container: qc.acc_sleazy-lime-balinese
   QC.Doc:
     repos:
-      git.scc.kit.edu/m-team/ai/demo-advanced-api find_doc_files.py:
+      codebase.helmholtz.cloud/m-team/ai/demo-advanced-api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-pear-beagle.sh
-        container: qc.doc_stinky-viridian-russel
-      git.scc.kit.edu/m-team/ai/demo-advanced-api git:
+        - /usr/bin/env sh .sqa/script.stinky-cyan-walrus.sh
+        container: qc.doc_paltry-firebrick-sponge
+      codebase.helmholtz.cloud/m-team/ai/demo-advanced-api git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-mustard-yak.sh
-        container: qc.doc_lovely-zucchini-bongo
+        - /usr/bin/env sh .sqa/script.bluesy-lemon-corgi.sh
+        container: qc.doc_zippy-cream-clam
   QC.Lic:
     repos:
-      git.scc.kit.edu/m-team/ai/demo-advanced-api licensee:
+      codebase.helmholtz.cloud/m-team/ai/demo-advanced-api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-zucchini-spider.sh
-        container: qc.lic_craggy-white-bulldog
+        - /usr/bin/env sh .sqa/script.hazy-cerise-grouse.sh
+        container: qc.lic_muggy-heliotrope-lobster
   QC.Ver:
     repos:
-      git.scc.kit.edu/m-team/ai/demo-advanced-api get_git_tags.py:
+      codebase.helmholtz.cloud/m-team/ai/demo-advanced-api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-thistle-moose.sh
-        container: qc.ver_gamy-cyan-discus
+        - /usr/bin/env sh .sqa/script.skinny-blue-ferret.sh
+        container: qc.ver_trippy-burgundy-wombat
 timeout: 5400

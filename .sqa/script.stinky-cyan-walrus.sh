@@ -3,6 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd git.scc.kit.edu/m-team/ai/demo-advanced-api &&
-    licensee detect . --confidence 60 --json
+cd codebase.helmholtz.cloud/m-team/ai/demo-advanced-api &&
+    find_doc_files.py --file_type all
 )

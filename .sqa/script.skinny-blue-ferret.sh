@@ -3,6 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd git.scc.kit.edu/m-team/ai/demo-advanced-api &&
-    git rev-parse --is-inside-work-tree
+cd codebase.helmholtz.cloud/m-team/ai/demo-advanced-api &&
+    get_git_tags.py
 )
