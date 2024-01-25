@@ -1,0 +1,42 @@
+config:
+  credentials: []
+  project_repos:
+    git.scc.kit.edu/m-team/ai/demo-advanced-api:
+      branch: main
+      repo: https://git.scc.kit.edu/m-team/ai/demo-advanced-api
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      git.scc.kit.edu/m-team/ai/demo-advanced-api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-brown-bonobo.sh
+        container: qc.acc_sunny-emerald-grouse
+  QC.Doc:
+    repos:
+      git.scc.kit.edu/m-team/ai/demo-advanced-api find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-pear-beagle.sh
+        container: qc.doc_stinky-viridian-russel
+      git.scc.kit.edu/m-team/ai/demo-advanced-api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-mustard-yak.sh
+        container: qc.doc_lovely-zucchini-bongo
+  QC.Lic:
+    repos:
+      git.scc.kit.edu/m-team/ai/demo-advanced-api licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-zucchini-spider.sh
+        container: qc.lic_craggy-white-bulldog
+  QC.Ver:
+    repos:
+      git.scc.kit.edu/m-team/ai/demo-advanced-api get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-thistle-moose.sh
+        container: qc.ver_gamy-cyan-discus
+timeout: 5400
